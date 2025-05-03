@@ -79,7 +79,7 @@ function App() {
             {/* Key in the top-left corner */}
             <div className={style.keyContainer}>
               {/* The key content can be text or an image */}
-              <h3 style={{ width: "0px", height: "auto" }} /> Click on a location to see the forecast ..
+              <h3 style={{ width: "0px", height: "auto" }} /> Click on a location to see the forecast
               {/* <span>Key Information</span> */}
             </div>
           </motion.div>
