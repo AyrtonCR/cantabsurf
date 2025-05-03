@@ -66,7 +66,16 @@ function App() {
       <AnimatePresence>
         {showMapDiv && (
           <motion.div key="map" className="map-div" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-            <img src={CantabImage} alt="cantab-map" classname={style.cantab_image}></img>
+            <img
+              src={CantabImage}
+              alt="cantab-map"
+              classname={style.cantab_image}
+              style={{
+                width: "100vw",
+                height: "100vh",
+                objectFit: "contain", // or 'cover'
+              }}
+            ></img>
           </motion.div>
         )}
       </AnimatePresence>
