@@ -88,8 +88,53 @@
   justify-content: center;
 }
 
-/* .cantab_image {
-  width: '100vw',
-  height: '100vh',
-  objectFit: 'contain' // or 'cover'
-} */
+/* Remove flex styles from .map-div to avoid conflict */
+body,
+.map-div {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* .keyContainer */
+.keyContainer {
+  position: absolute;
+  top: 10px; /* Distance from the top */
+  left: 50%; /* Move to horizontal center */
+  transform: translateX(-50%); /* Center it exactly */
+  background: linear-gradient(45deg, #90ee90, #00bfff);
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 15px 5px rgba(0, 255, 255, 0.3);
+  animation: shineEffect 1.5s infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 200vw;
+  word-wrap: break-word;
+}
+
+/* Optional: style for the key image */
+.keyContainer {
+  width: 300px;
+  /* width: 50px; Size of the key image */
+  /* height: auto; */
+  /* margin-right: 1px; Space between the image and text */
+}
+
+/* Shine animation */
+@keyframes shineEffect {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 15px 5px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.8), 0 0 30px 10px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.5), 0 0 15px 5px rgba(0, 255, 255, 0.3);
+  }
+}
